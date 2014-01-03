@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"ykhqEJ_LDFBNzs2RnXtIc2-QyAc/qpT9ByUivRJ49OqEYWlq64SboMU\"",
+ "etag": "\"ykhqEJ_LDFBNzs2RnXtIc2-QyAc/mjaoSWM_94IG9NFRD0nB5fFina8\"",
  "discoveryVersion": "v1",
  "id": "item:v1",
  "name": "item",
@@ -73,6 +73,9 @@
    "id": "Item",
    "type": "object",
    "properties": {
+    "code": {
+     "type": "string"
+    },
     "createDate": {
      "type": "string",
      "format": "date-time"
@@ -80,16 +83,21 @@
     "description": {
      "type": "string"
     },
-    "id": {
-     "type": "string",
-     "format": "int64"
-    },
     "title": {
      "type": "string"
     },
     "updateDate": {
      "type": "string",
      "format": "date-time"
+    }
+   }
+  },
+  "Text": {
+   "id": "Text",
+   "type": "object",
+   "properties": {
+    "value": {
+     "type": "string"
     }
    }
   }
@@ -115,8 +123,44 @@
     "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
+  "item.itemService.findByCode": {
+   "id": "item.itemService.findByCode",
+   "allowGet": true,
+   "parameters": {
+    "code": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "code"
+   ],
+   "returns": {
+    "$ref": "Item"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
   "item.itemService.save": {
    "id": "item.itemService.save",
+   "parameters": {
+    "resource": {
+     "$ref": "Item"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Text"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "item.itemService.update": {
+   "id": "item.itemService.update",
    "parameters": {
     "resource": {
      "$ref": "Item"

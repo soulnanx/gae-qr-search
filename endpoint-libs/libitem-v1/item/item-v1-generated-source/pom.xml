@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-item</artifactId>
-  <version>v1-rev20131230133556-1.16.0-rc</version>
-  <name>item v1 (revision 20131230133556)</name>
+  <version>v1-rev20140103183233-1.16.0-rc</version>
+  <name>item v1 (revision 20140103183233)</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/item/v1/20131230133556/java/1.16.0-rc/qr_search_api_appspot_com-item-v1-20131230133556-java-1.16.0-rc-sources.jar", 
-      "path": "qr_search_api_appspot_com-item-v1-20131230133556-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/item/v1/20140103183233/java/1.16.0-rc/qr_search_api_appspot_com-item-v1-20140103183233-java-1.16.0-rc-sources.jar", 
+      "path": "qr_search_api_appspot_com-item-v1-20140103183233-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2013-12-30 13:36"
+      "timestamp": "2014-01-03 18:32"
     }, 
     {
-      "path": "qr_search_api_appspot_com-item-v1-20131230133556-java-1.16.0-rc.jar.properties", 
+      "path": "qr_search_api_appspot_com-item-v1-20140103183233-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -701,5 +701,5 @@
   "version": "v1", 
   "language_version": "1.16.0-rc", 
   "id": "item:v1", 
-  "revision": 20131230133556
+  "revision": 20140103183233
 }
