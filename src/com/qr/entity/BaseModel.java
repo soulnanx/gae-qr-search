@@ -9,6 +9,7 @@ import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
+import com.qr.utils.ParseUtil;
 
 public class BaseModel<T> {
 
@@ -32,17 +33,13 @@ public class BaseModel<T> {
 
 	}
 	
-	public Entity findByCode(String code){
+	public List<Item> findByCode(String code){
 		Query q = new Query("Item");
 		Query.Filter query_filter = new Query.FilterPredicate("code", Query.FilterOperator.EQUAL, code);
 		q.setFilter(query_filter);
 		PreparedQuery pq = DatastoreServiceFactory.getDatastoreService().prepare(q);
-		List<Entity> lista = pq.asList(FetchOptions.Builder.withDefaults());
-		
-		Entity entity = lista.iterator().next();
-		
-		
-		return entity;
+		List<Entity> listEntity = pq.asList(FetchOptions.Builder.withDefaults());
+		return new ParseUtil<Item>().getListObjectFromListEntity(listEntity, new Item());
 	}
 
 }
